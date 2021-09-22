@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/good-food/static/css/main.9a0e0496.chunk.css",
+    "main.js": "/good-food/static/js/main.10f2c810.chunk.js",
+    "main.js.map": "/good-food/static/js/main.10f2c810.chunk.js.map",
+    "runtime-main.js": "/good-food/static/js/runtime-main.cfa0aaec.js",
+    "runtime-main.js.map": "/good-food/static/js/runtime-main.cfa0aaec.js.map",
+    "static/js/2.2c6c4b19.chunk.js": "/good-food/static/js/2.2c6c4b19.chunk.js",
+    "static/js/2.2c6c4b19.chunk.js.map": "/good-food/static/js/2.2c6c4b19.chunk.js.map",
+    "index.html": "/good-food/index.html",
+    "static/css/main.9a0e0496.chunk.css.map": "/good-food/static/css/main.9a0e0496.chunk.css.map",
+    "static/js/2.2c6c4b19.chunk.js.LICENSE.txt": "/good-food/static/js/2.2c6c4b19.chunk.js.LICENSE.txt",
+    "static/media/cart-sheque.module.scss": "/good-food/static/media/cart-cheque.97f3bdb5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cfa0aaec.js",
+    "static/js/2.2c6c4b19.chunk.js",
+    "static/css/main.9a0e0496.chunk.css",
+    "static/js/main.10f2c810.chunk.js"
+  ]
+}
