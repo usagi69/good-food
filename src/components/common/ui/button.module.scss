@@ -1,0 +1,30 @@
+@import "../../../commonStyles/variables";
+
+.primaryButton {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  color: $color-text-header;
+  font-weight: 600;
+  background-color: $color-accent;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  transition: 0.2s all ease-in;
+
+  @media (max-width: $screen-xxs) {
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+
+    margin-bottom: 2rem;
+  }
+
+  &:hover {
+    background-color: $color-accent-2;
+  }
+  &:active {
+    background-color: $color-accent-3;
+  }
+}

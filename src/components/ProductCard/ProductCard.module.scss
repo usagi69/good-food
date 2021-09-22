@@ -1,0 +1,183 @@
+@import "../../commonStyles/variables.scss";
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  height: 100%;
+
+  width: 27rem;
+
+  margin-left: 2.4rem;
+  margin-bottom: 2.4rem;
+  padding: 1.5rem;
+  font-family: Roboto, sans-serif;
+  border: $border-v-hidden;
+  transition: 0.2s border ease-in;
+
+  @media (max-width: $screen-xxs) {
+    width: 94%;
+  }
+
+  &:hover {
+    border: $border;
+    border-radius: 0.5rem;
+  }
+
+  &__link {
+  }
+  &__img {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+
+    & img {
+      max-width: 100%;
+      max-height: 20rem;
+      @media (max-width: $screen-xxs) {
+        max-height: 30rem;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+
+    margin-bottom: 2.5rem;
+    min-height: 4rem;
+
+    @media (max-width: $screen-xxs) {
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 2.5rem;
+
+      margin-bottom: 1rem;
+      min-height: 4rem;
+    }
+  }
+  &__composition {
+    font-size: 1.4rem;
+    text-align: left;
+    margin-bottom: 0rem;
+
+    @media (max-width: $screen-xxs) {
+      font-size: 1.5rem;
+    }
+  }
+  &__compositionItem {
+    position: relative;
+    display: inline-block;
+    padding-right: 1.5rem;
+    color: $color-text-regular;
+
+    background-color: $color-bg;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+
+    margin-top: 0.7rem;
+    margin-right: 1rem;
+
+    &::after {
+      position: absolute;
+      content: ".";
+      font-weight: 700;
+      padding: 0 0.65rem;
+      bottom: 0.57rem;
+    }
+  }
+  &__composition-item:last-child {
+    &::after {
+      position: absolute;
+      content: "";
+    }
+  }
+
+  &__innerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: auto;
+  }
+
+  &__selectForm {
+    margin: 0;
+    padding: 0;
+    & li {
+      display: inline;
+      padding: 0;
+      margin: 0;
+
+      button {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__selectSize {
+    font-family: Roboto, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    background-color: transparent;
+    border: none;
+    border: $border;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    color: $color-text-regular;
+    transition: 0.2s all ease-in;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    &_active {
+      color: $color-text-header;
+      background-color: $color-accent;
+    }
+  }
+
+  &__price {
+    font-size: 2rem;
+    margin: 1rem 0;
+
+    font-weight: 700;
+    padding-left: 1.7rem;
+    position: relative;
+    text-align: right;
+
+    @media (max-width: $screen-xxs) {
+      font-size: 3rem;      
+      padding-left: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    &::before {
+      position: absolute;
+      content: "РМБ";
+      margin-left: -5.5rem;
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    border: $border;
+    border-radius: 0.5rem;
+  }
+
+  @media (max-width: $screen-xxs) {
+    &__price {
+
+      &::before {
+        position: absolute;
+        content: "РМБ";
+        margin-left: -8.5rem;
+      }
+    }
+  }
+
+  button {
+    :last-child {
+      color: red;
+    }
+  }
+}

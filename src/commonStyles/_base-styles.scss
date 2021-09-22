@@ -1,0 +1,111 @@
+// ширина с учётом и отступов и падингов
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  background-color: white;
+  color: $color-text-header;
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 300;
+  margin: 0;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 0 10px; 
+}
+
+li {
+  list-style-type: none; 
+ }
+
+.hidden {
+  display: none; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* класс для добавления анимации элементам управления */
+.link-animation {
+  &:hover{
+    color: red;
+  }
+  &:before {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background: red;
+    transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+    left: 50%;
+    bottom: 0;
+  }
+  &:after {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: red;
+    transition: width 0.2s ease-in-out;
+    left: 50%;
+    bottom: 0;
+  }
+ 
+  /* подчёркивания при наведении */
+  &:hover:before {
+    width: 50%;
+    left: 0;
+  }
+  &:hover:after {
+    width: 50%;
+  }
+  &:hover {
+    svg {
+      fill: red;
+    }
+  }
+  &:hover span{
+    color: red;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

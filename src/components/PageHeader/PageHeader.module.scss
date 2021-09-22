@@ -1,0 +1,129 @@
+@import "../../commonStyles/variables.scss";
+@import "./header-menu.scss";
+
+.header {
+  color: $color-text-header;
+  font-size: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 1px 5px 1px rgba($color: #3a3d49, $alpha: 0.5);
+
+  &__inner {
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+  }
+
+  @media (max-width: $screen-xxs) {
+    &__logo {
+      display: none;
+    }
+  }
+
+  &__menu {
+    width: 360px;
+    margin-right: 2rem;
+  }
+
+  &__userBlock {
+    display: flex;
+  }
+
+  &__mobileMenuButton {
+    font-size: 2.5rem;
+    display: none;
+
+    & button {
+      border: none;
+      cursor: pointer;
+      color: $color-text-header;
+      font-weight: 600;
+      padding: 0 0.5rem;
+      background-color: transparent;
+    }
+  }
+
+  &__mobileMenuToggle {
+    display: block;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    color: $color-text-header;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 0 0.5rem;
+    background-color: transparent;
+    padding-top: 0rem;
+    margin-left: auto;
+  }
+  @media (max-width: $screen-md) {
+    font-size: 1.7rem;
+
+    &__userBlock {
+      display: none;
+    }
+
+    &__mobileMenuButton {
+      display: block;
+    }
+  }
+  @media (max-width: $screen-xs) {
+    font-size: 1.5rem;
+
+    &__menu {
+      margin-right: 1.2rem;
+    }
+
+    &__inner {
+      padding: 15px 5px;
+    }
+  }
+  @media (max-width: $screen-xxs) {
+    font-size: 1rem;
+
+    &__inner {
+      padding: 10px 5px;
+    }
+
+    &__mobileMenuToggle {
+      display: block;
+    }
+  }
+
+  .logo {
+    position: relative;
+    text-align: center;
+
+    font-family: "Oswald-SemiBold", sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: 10px 30px 10px 10px;
+
+    &::before {
+      position: absolute;
+      left: -0.6em;
+      content: "+";
+      font-size: inherit;
+      color: inherit;
+    }
+
+    &::after {
+      position: absolute;
+      content: "+";
+      left: 1.5em;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    @media (max-width: $screen-xs) {
+      font-size: 2.5rem;
+    }
+  }
+}

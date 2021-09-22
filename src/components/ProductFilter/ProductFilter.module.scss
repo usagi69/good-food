@@ -1,0 +1,48 @@
+@import "../../commonStyles/variables.scss";
+
+.filters {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+    margin-left: 0;
+
+    & li {
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      @media (max-width: $screen-sm) {
+        margin-right: 0.7rem;
+        margin-bottom: 0.7rem;
+      }
+    }
+  }
+
+  &__type {
+    font-family: Roboto, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    background-color: transparent;
+    border: none;
+    border: $border;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    color: $color-text-regular;
+    transition: 0.3s all ease-in;
+
+    @media (max-width: $screen-sm) {
+   
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.5rem 0.7rem;
+
+    }
+
+    &_active {
+      color: white;
+      background-color: $color-text-header;
+    }
+  }
+}

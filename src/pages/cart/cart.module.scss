@@ -1,0 +1,154 @@
+@import "../../commonStyles/variables";
+
+.cart {
+  width: 100%;
+  margin-bottom: 10rem;
+
+  &__body {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  &__table {
+    width: 70%;
+    margin-right: 5%;
+  }
+  &__cheque {
+    position: sticky;
+    top: 10rem;
+    width: 25%;
+  }
+
+  @media (max-width: $screen-lg) {
+    &__body {
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__table {
+      width: 80%;
+      margin-right: 0;
+    }
+    &__cheque {
+      position: sticky;
+      top: 10rem;
+
+      width: 100%;
+      max-width: 40rem;
+    }
+  }
+  @media (max-width: $screen-md) {
+    &__table {
+      width: 100%;
+      margin-right: 0;
+    }
+    &__emptyReturn {
+      font-size: 2rem;
+      padding: 1.5rem 2rem;
+    }
+  }
+}
+
+.section {
+  &__header {
+    background-color: $color-bg;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-size: 4.9rem;
+    font-weight: 700;
+  }
+}
+
+.table {
+  &__header {
+    display: flex;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__productList {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.tableHeader {
+  font-size: 1.4rem;
+  color: $color-text-regular;
+  text-align: center;
+  font-weight: 400;
+  padding: 1.5rem 0;
+  border-bottom: $border;
+
+  :first-child {
+    text-align: left;
+  }
+
+  &__productName {
+    width: 46%;
+  }
+  &__productPrice {
+    width: 13%;
+  }
+  &__productQuantity {
+    width: 20%;
+  }
+  &__productSubtotal {
+    width: 11%;
+  }
+  &__productDelete {
+    margin-left: auto;
+  }
+
+  @media (max-width: $screen-sm) {
+    /* на узких экранах отключаю столбец с ценой */
+    &__productName {
+      width: 54%;
+    }
+
+    &__productPrice {
+      width: 0;
+      display: none;
+    }
+    &__productQuantity {
+      width: 25%;
+    }
+  }
+
+  @media (max-width: $screen-xs) {
+    &__productName {
+      width: 44%;
+    }
+
+    &__productQuantity {
+      width: 25%;
+    }
+
+    &__productSubtotal {
+      width: 16%;
+    }
+  }
+
+  @media (max-width: $screen-xs) {
+    &__productName {
+      width: 59%;
+    }
+
+    &__productQuantity {
+      width: 30%;
+    }
+
+    &__productSubtotal {
+      width: 0;
+      display: none;
+    }
+  }
+}

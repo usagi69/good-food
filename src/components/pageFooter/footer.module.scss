@@ -1,0 +1,113 @@
+@import "../../commonStyles/variables";
+
+.footer {
+  background-color: $color-bg;
+  font-family: "Oswald", sans-serif;
+  position: relative;
+
+  &:hover {
+    .serviceMessage {
+      opacity: 1;
+      transition: opacity 0.3s linear;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @media (max-width: $screen-xs) {
+      margin-left: 5rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__subscribeForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+  }
+  &__formTitle {
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  &__form {
+    display: flex;
+  }
+  &__formInput {
+    padding: 0.7rem 1.5rem;
+    border: $border-easy;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+
+    &::placeholder {
+      font-weight: normal;
+      font-size: 11.4;
+      line-height: 3rem;
+    }
+  }
+  &__formButton {
+    height: 3rem;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    color: white;
+    background-color: $color-accent;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+  &__informationList {
+    margin-right: 1.5rem;
+  }
+  &__socialLinks {
+    height: 100%;
+    width: 300px;
+  }
+}
+
+.serviceMessage {
+  position: absolute;
+  left: calc(50% - 100px);
+  padding: 10px;
+  color: $color-bg;
+  background-color: $color-text-header;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  bottom: 0;
+
+  @media (max-width: $screen-xxs) {
+    left: 15%;
+  }
+}
+
+.listInfo {
+  display: flex;
+  justify-content: center;
+
+  &__title {
+    font-weight: bold;
+    line-height: 25px;
+  }
+  &__list {
+    line-height: 25px;
+    padding-left: 2rem;
+  }
+}
